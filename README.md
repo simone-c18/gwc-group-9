@@ -38,10 +38,10 @@ command to run if program contains helper info
 Thank you to everyone who made this project come to life! 
 All original art created by Lena Tran
 
-Simone Chrastek
-Abigail Loken
-Lena Tran
-Aishitha Saravanan 
+* Simone Chrastek
+* Abigail Loken
+* Lena Tran
+* Aishitha Saravanan 
 
 ## Version History
 
