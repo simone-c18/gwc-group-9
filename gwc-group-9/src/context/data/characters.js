@@ -53,5 +53,6 @@ export const CHARACTERS = [
 //function to find character data by id
 export const getCharacterById = (id) => {
     return CHARACTERS.find(character => character.id === id);
+    //comment
 };
 
