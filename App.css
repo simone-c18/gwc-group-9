@@ -1,0 +1,54 @@
+body{
+    background-color:white;
+}
+
+/* div{
+    text-align: center; /* centers text in all divs */
+/* } */ 
+
+/* #text{
+    size:2rem;
+    color:green;
+} */
+
+/* // style for the text boxes */
+#text_Box{
+    background-color:#FFB7C5;
+    border-radius: 8px;
+    border-color:#E75480;
+
+}
+/* // style for the text box title */
+#text_Title{
+    color:hotpink;
+    text-align: center;
+}
+
+
+button{
+    background-color: #E18BB0; /* changes backgroudn color of all buttons*/
+    border-radius: 8px; /* Changes border radius of all buttons*/ 
+    /* margin: 0px 0px 10px 0px; */
+    text-align: center; /* Makes all button text centered */
+
+    width: fit-content; /* Makes width of button fit the whole page*/
+    height:fit-content; /* Makes height of mkae height of all buttons 2rem */
+    font-size: 2rem; /* Makes font size of all buttons to be 1rem*/
+    display: block;
+    margin: auto; 
+
+    
+}
+
+button:hover {
+    background-color: #efc0d4;
+    color: black;
+}
+
+#title{
+    font-size: 5rem; /* Changes the size of the title */
+    color: white; /*Changes the color of the text */
+    -webkit-text-stroke-color: black; /* Changes the outline of the text*/
+    -webkit-text-stroke-width: 1.5px;  /* Determines the thickness of the text outline*/
+    text-align:  center;
+}   
