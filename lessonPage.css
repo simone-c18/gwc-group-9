@@ -1,32 +1,31 @@
 body{
-    background-color:pink;
+    /* MAKE THE BACKGROUND THE FLOWER IMAGE*/
 }
 
-/* div{
-    text-align: center; /* centers text in all divs */
-/* } */ 
-
-/* #text{
-    size:2rem;
-    color:green;
-} */
 
 /* // style for the text boxes */
 #text_Box{
-    background-color:#FFB7C5;
+    background-color:#ffbcd9;
     border-radius: 8px;
-    border-color:#E75480;
+    border-color:#FF69B4;
+    width: 70vh;   /* 80% of the viewport width */
+    height: 40vh;  /* 50% of the viewport height */
+border-style: solid;
+border-width: 2px;
+margin: 0 auto; /* centers horizontally */
+padding-left: 20px;
 
 }
 /* // style for the text box title */
 #text_Title{
-    color:hotpink;
+    color:#D90166;
     text-align: center;
 }
 
 
 button{
-    background-color: #E18BB0; /* changes backgroudn color of all buttons*/
+      margin-top: 10px;
+    background-color: #FF69B4; /* changes backgroudn color of all buttons*/
     border-radius: 8px; /* Changes border radius of all buttons*/ 
     /* margin: 0px 0px 10px 0px; */
     text-align: center; /* Makes all button text centered */

@@ -13,7 +13,7 @@ body{
 
 /* // style for the text boxes */
 #text_Box{
-    background-color:#FFB7C5;
+    background-color:#E75480;
     border-radius: 8px;
     border-color:#E75480;
 
@@ -26,7 +26,7 @@ body{
 
 
 button{
-    background-color: #E18BB0; /* changes backgroudn color of all buttons*/
+    background-color: #FC9ACE; /* changes backgroudn color of all buttons*/
     border-radius: 8px; /* Changes border radius of all buttons*/ 
     /* margin: 0px 0px 10px 0px; */
     text-align: center; /* Makes all button text centered */
@@ -37,6 +37,8 @@ button{
     display: block;
     margin: auto; 
 
+        border-radius: 8px;
+    border-color:#D90166;
     
 }
 
