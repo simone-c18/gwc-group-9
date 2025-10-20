@@ -6,8 +6,15 @@ export default function pick(){
 
   <div className="response">
     <h3> Choose your Response: </h3>
+    <ul className ="buttons"> 
+         <li><button> Response 1</button> </li> 
+    <li><button> Response 2</button></li>
+    </ul>
+
      </div>
-   <div className="npcConversation">  </div>
+    <div className="npcConversation">  
+conversation
+   </div> 
 </div>
 
 
