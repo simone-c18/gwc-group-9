@@ -6,7 +6,7 @@ export const CHARACTERS = [
     {
         id: 'java',
         name: 'Java',
-        bio: "cute sentence that describes java character",
+        bio: "A cute professor who sees the world with stars in their eyes",
 
         //paths to visual assets
         avatarPath: '..', //add path

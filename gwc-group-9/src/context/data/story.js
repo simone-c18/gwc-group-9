@@ -52,3 +52,30 @@ export const CHARACTERS = {
     }
 }
 
+export function storyProgression(ichar = 'java') {
+    let char = ichar;
+    let index = 0;
+    
+    function getDialogue() {
+        return CHARACTERS[char].dialouges[index];
+    }
+
+    function nextDialogue(optionIndex = null) {
+        if (optionIndex !== null) {
+            index = optionIndex;
+        } else {
+            index += 1;
+        }
+    }
+
+    function switchCharacter(newChar) {
+        char = newChar;
+        index = 0;
+    }
+
+    return {
+        getDialogue,
+        nextDialogue,
+        switchCharacter
+    };
+}
