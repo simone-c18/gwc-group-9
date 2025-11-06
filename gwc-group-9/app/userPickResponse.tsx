@@ -1,4 +1,4 @@
-import '../src/styles/page.css';
+import '../src/styles/userPickResponse.css';
 export default function pick(){
     return (
 <div className="App">
