@@ -44,12 +44,18 @@ margin-left: 15vh;
 
 }
 .buttons{
-    text-align: center;
-    list-style-type: none;
-    border-radius: 8px;
+   margin-top: 1vh;
 }
 button{
-    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 8px;
+    text-align: center;
+        color: black;
+    background-color: pink;
+    border-color: pink;
+    border-width:thin;
+
+ 
 }
 
 

@@ -9,9 +9,12 @@ name
      </div>
     <div className="npcConversation">  
 conversation
-
+<div className = "buttons">
         <br></br> <button> Response 1</button> <br></br>
     <button> Response 2</button>
+
+</div>
+
     
    </div> 
 </div>
