@@ -1,0 +1,51 @@
+/* Styles for character selection page */
+.character-selection{
+  background-image: url('/images/street_bg.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 6rem;
+  box-sizing: border-box;
+}
+
+.selection-header{
+  text-align: center;
+  color: white;
+  -webkit-text-stroke: 1.5px black;
+  font-size: 2.5rem;
+}
+
+.character-grid{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.character-card{
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.character-image{
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform 0.15s ease;
+}
+
+.character-card:hover .character-image{
+  transform: translateY(-6px) scale(1.03);
+}
+
+.character-name{
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black;
+}

@@ -9,8 +9,8 @@ export const CHARACTERS = [
         bio: "cute sentence that describes java character",
 
         //paths to visual assets
-        avatarPath: '..', //add path
-        spritePath: '..',
+        avatarPath: '/images/JavaBasic.png',
+        spritePath: '/images/JavaBasic.png',
 
         //link to story and quiz ("date")
         storyId: 'story-java',
@@ -24,8 +24,8 @@ export const CHARACTERS = [
         bio: "cute sentence that describes java character",
 
         //paths to visual assets
-        avatarPath: '..', //add path
-        spritePath: '..',
+        avatarPath: '/images/JavaBasic.png',
+        spritePath: '/images/JavaBasic.png',
 
         //link to story and quiz ("date")
         storyId: 'story-c',
@@ -39,8 +39,8 @@ export const CHARACTERS = [
         bio: "cute sentence that describes java character",
 
         //paths to visual assets
-        avatarPath: '..', //add path
-        spritePath: '..',
+        avatarPath: '/images/JavaBasic.png',
+        spritePath: '/images/JavaBasic.png',
 
         //link to story and quiz ("date")
         storyId: 'story-python',
