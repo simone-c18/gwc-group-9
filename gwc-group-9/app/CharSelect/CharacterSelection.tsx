@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import "./CharacterSelection.css";
 
@@ -7,23 +7,26 @@ const characters = [
   {
     id: "C",
     name: "C",
-    image: "https://picsum.photos/200/300?random=1",
+    image: "/Assets/C bitch face.png",
+    hoverImage: "/Assets/C.png",
   },
   {
     id: "Python",
     name: "Python",
-    image: "https://picsum.photos/200/300?random=2",
+    image: "/Assets/Python.png",
+    hoverImage: "/Assets/python smole.png",
   },
-
   {
     id: "Java",
     name: "Java",
-    image: "https://picsum.photos/200/300?random=3",
+    image: "/Assets/JavaBasic.png",
+    hoverImage: "/Assets/Java smole.png" // Fixed typo: was "Assests"
   },
 ];
 
 export default function CharacterSelection() {
   const router = useRouter();
+  const [hoveredChar, setHoveredChar] = useState<string | null>(null);
 
   const handleClick = (path: string) => {
     router.push(path);
@@ -39,9 +42,11 @@ export default function CharacterSelection() {
             key={char.id}
             className="character-card"
             onClick={() => handleClick(char.name)}
+            onMouseEnter={() => setHoveredChar(char.id)}
+            onMouseLeave={() => setHoveredChar(null)}
           >
             <img
-              src={char.image}
+              src={hoveredChar === char.id ? char.hoverImage : char.image}
               alt={char.name}
               className="character-image"
             />
