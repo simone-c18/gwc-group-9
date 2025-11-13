@@ -1,4 +1,4 @@
-# Date Languages!
+# Intro to Love!
 
 A fun visual novel game inspired by dating simulators to help players learn the basics of different coding languages.
 
