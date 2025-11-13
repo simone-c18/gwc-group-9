@@ -4,19 +4,18 @@ export default function pick(){
 <div className="App">
   <button> BACK </button>
 
-  <div className="name">
+    <div className="name">
 name
-     </div>
+    </div>
     <div className="npcConversation">  
 conversation
-<div className = "buttons">
+    <div className = "buttons">
         <br></br> <button> Response 1</button> <br></br>
     <button> Response 2</button>
-
-</div>
+    </div>
 
     
-   </div> 
+    </div> 
 </div>
 
 
