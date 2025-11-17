@@ -12,6 +12,7 @@ header{
     background-repeat: no-repeat; /* Prevents image repetition */
     background-position: center center;  
     background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-size: cover;
     width: 100vw; /* 100% of the viewport width */
     min-height: 100vh; /* At least 100% of the viewport height */
 }

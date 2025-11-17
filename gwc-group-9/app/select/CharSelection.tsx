@@ -5,9 +5,9 @@ import "./select.css";
 import { useGame } from "../../context/GameContext";
 
 const characters = [
-  { id: "C", name: "C", image: "/images/C_default.png", hoverImage: "/images/C_hover.png" },
-  { id: "Python", name: "Python", image: "/images/Py_default.png", hoverImage: "/images/Py_hover.png" },
-  { id: "Java", name: "Java", image: "/images/Java_default.png", hoverImage: "/images/Java_hover.png" },
+  { id: "c", name: "C", image: "/images/C_default.png", hoverImage: "/images/C_hover.png" },
+  { id: "python", name: "Python", image: "/images/Py_default.png", hoverImage: "/images/Py_hover.png" },
+  { id: "java", name: "Java", image: "/images/Java_default.png", hoverImage: "/images/Java_hover.png" },
 ];
 
 export default function CharacterSelection() {
@@ -30,7 +30,7 @@ export default function CharacterSelection() {
           <div
             key={char.id}
             className="character-card"
-            onClick={() => handleClick(char.name)}
+            onClick={() => handleClick(char.id)}
             onMouseEnter={() => setHoveredChar(char.id)}
             onMouseLeave={() => setHoveredChar(null)}
           >

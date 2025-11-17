@@ -1,51 +1,72 @@
-/* Styles for character selection page */
-.character-selection{
-  background-image: url('/images/street_bg.png');
+.character-selection {
+  background-image: url('/Assets/treeblossoms.png');
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  width: 100vw;
-  min-height: 100vh;
-  padding-top: 6rem;
-  box-sizing: border-box;
-}
-
-.selection-header{
   text-align: center;
-  color: white;
-  -webkit-text-stroke: 1.5px black;
-  font-size: 2.5rem;
-}
+  padding: 1px 20px;
+  font-family: 'Garamond', serif;
+  color: #333;
+  min-height: 100vh;
+} /* section for font and backgrounf and text stuff*/
 
-.character-grid{
+.selection-header {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #ffffff;
+  
+  text-shadow: 1px 1px 2px black;
+} /* Header size and color and added a shadow to it cuz idk how to outline it for some reason*/
+
+
+.character-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.character-card{
-  width: 200px;
+.character-card {
+  position: relative;
+  width: 400px;
+  height: 600px;
   cursor: pointer;
-  text-align: center;
+  overflow: hidden;
+  border: 3px solid transparent;
+  transition: transform 0.2s, border-color 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.character-image{
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
-  transition: transform 0.15s ease;
+.character-card:hover {
+  transform: scale(1.05);
+  border-color: #ff7373;
+} /**/
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
 }
 
-.character-card:hover .character-image{
-  transform: translateY(-6px) scale(1.03);
-}
-
-.character-name{
-  margin-top: 0.5rem;
+.character-name {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
   color: white;
-  font-weight: 700;
+  padding: 10px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
   text-shadow: 1px 1px 2px black;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.character-card:hover .character-name {
+  opacity: 1;
 }

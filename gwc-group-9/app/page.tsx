@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <header>Date Everything!</header>
+      <header>Intro to Love!</header>
       <main>
         <ul className="start-buttons">
           <li>
@@ -25,8 +25,8 @@ export default function App() {
             </Link>
           </li>
           <li>
-            <Link href="/credit">
-              <button className="start-button">Credit</button>
+            <Link href="/credits">
+              <button className="start-button">Credits</button>
             </Link>
           </li>
         </ul> 

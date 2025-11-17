@@ -1,0 +1,57 @@
+.App{
+    background-image: url('public/images/hallway_bg.png'); 
+    /* background-size: cover; Ensures the image covers the entire element */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-position: center center;  
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    width: 100vw; /* 100% of the viewport width */
+    min-height: 100vh; /* At least 100% of the viewport height */
+}
+
+.name{
+    background-color:#ffbcd9;
+    border-radius: 8px;
+    border-color:#FF69B4;
+    width: 80vh;   /* 80% of the viewport width */
+    height: 30vh;  /* 50% of the viewport height */
+    border-style: solid;
+    border-width: 2px;
+    /* margin: 0 auto; centers horizontally */
+    padding-left: 20px;
+
+    position: absolute;
+    margin-left: 15vh;
+    margin-top: 54vh;
+    height: 5vh;
+    width: 70vh;
+    text-align:center;
+}
+
+.npcConversation{
+    background-color:#ffbcd9;
+    border-radius: 8px;
+    border-color:#FF69B4;
+    width: 170vh;   /* 80% of the viewport width */
+    height: 30vh;  /* 25% of the viewport height */
+    border-style: solid;
+    border-width: 2px;
+    /* margin: 0 auto; centers horizontally */
+    padding-left: 20px;
+
+    margin-top: 60vh;
+    margin-left: 15vh;
+}
+
+.buttons{
+   margin-top: 1vh;
+}
+
+button{
+    margin-bottom: 1vh;
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+    background-color: pink;
+    border-color: pink;
+    border-width:thin;
+}
