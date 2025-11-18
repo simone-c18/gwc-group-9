@@ -3,11 +3,12 @@ header{
     color: white;
     -webkit-text-stroke: 2.3px black;
     text-align: center;
-    font-size: 6em;
+    font-size: 9em;
+    text-shadow: 2px 2px 4px #333;
 }
 
 .App{
-    background-image: url('/images/street_bg.png'); 
+    background-image: url('/images/street_bg.png');   
     /* background-size: cover; Ensures the image covers the entire element */
     background-repeat: no-repeat; /* Prevents image repetition */
     background-position: center center;  
@@ -29,5 +30,18 @@ header{
     margin: 10px;
     font-size: 1.8em; 
     cursor: pointer;
-
+    transition: all 0.3s ease-in-out;
 }
+
+.start-button:hover {
+  /* 1. Scale up slightly */
+  transform: scale(1.05);
+  
+  /* 2. Add a shadow for depth */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  
+  /* 3. Change background color for visual feedback */
+  background-color: #ffb6c1; /* Lighter Pink */
+  border-color: #ffb6c1;
+}
+

@@ -9,8 +9,8 @@ export const CHARACTERS = [
         bio: "cute sentence that describes java character",
 
         //paths to visual assets
-        avatarPath: '/images/JavaBasic.png',
-        spritePath: '/images/JavaBasic.png',
+        avatarPath: '/images/Java_default.png',
+        spritePath: '/images/Java_hover.png',
 
         //link to story and quiz ("date")
         storyId: 'story-java',

@@ -1,10 +1,10 @@
 .character-selection {
-  background-image: url('/Assets/treeblossoms.png');
+  background-image: url('/images/street_bg.png');
   background-repeat: no-repeat;
   text-align: center;
   padding: 1px 20px;
   font-family: 'Garamond', serif;
-  color: #333;
+  color: white;
   min-height: 100vh;
 } /* section for font and backgrounf and text stuff*/
 
@@ -13,7 +13,6 @@
   text-align: center;
   margin-bottom: 1em;
   color: #ffffff;
-  
   text-shadow: 1px 1px 2px black;
 } /* Header size and color and added a shadow to it cuz idk how to outline it for some reason*/
 
@@ -31,16 +30,16 @@
   height: 600px;
   cursor: pointer;
   overflow: hidden;
-  border: 3px solid transparent;
+  /* border: 3px solid transparent; */
   transition: transform 0.2s, border-color 0.3s;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
 }
 
 .character-card:hover {
   transform: scale(1.05);
   border-color: #ff7373;
-} /**/
+} 
 
 .character-image {
   width: 100%;

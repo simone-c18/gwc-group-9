@@ -1,6 +1,6 @@
 'use client';
 
-import './date.css';
+import './convo.css';
 import { useRouter } from 'next/navigation';
 import { useGame } from '../../context/GameContext';
 import { getCharacterById } from '../../data/characters';
