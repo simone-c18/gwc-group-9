@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
+.settings-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/images/street_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  padding: 20px;
+  overflow: hidden;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-arrow {
+  width: 60px;
+  height: auto;
+}
+
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.coming-soon-title {
+   font-family: 'Dokdo', cursive;
+  -webkit-text-stroke: 0.4px black; 
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 6px black;
+  font-size: 9rem;
+}
+
+.coming-soon-sub {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  text-shadow: 2px 2px 5px black;
+}
