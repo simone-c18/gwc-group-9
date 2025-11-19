@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
 .character-selection {
   background-image: url('/images/street_bg.png');
   background-repeat: no-repeat;
   text-align: center;
   padding: 1px 20px;
-  font-family: 'Garamond', serif;
+  font-family: 'Dokdo', cursive;
+  -webkit-text-stroke: 0.4px black; 
   color: #333;
   min-height: 100vh;
 } /* section for font and backgrounf and text stuff/
@@ -60,7 +63,8 @@
   font-weight: bold;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
+  font-family: 'Dokdo', cursive;
+  -webkit-text-stroke: 0.4px black; 
   text-shadow: 1px 1px 2px black;
 
   opacity: 0;

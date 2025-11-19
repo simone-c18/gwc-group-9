@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
+.credits-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/images/street_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  padding: 20px;
+  overflow: hidden;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-arrow {
+  width: 60px;
+  height: auto;
+}
+
+.credits-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 68%;
+  margin: 120px auto 0 auto; 
+  align-items: center;
+}
+
+.credits-image-box {
+  width: 550px;       
+  height: 400px;      
+  background: rgba(240, 240, 240, 0.9);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.credits-text-box {
+  flex: 1;
+  color: white;
+  -webkit-text-stroke: 1.5px black; 
+  text-shadow: 3px 3px 6px black;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+}
+
+.credits-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6em; 
+  font-family: 'Dokdo', cursive;
+  color: white;
+  -webkit-text-stroke: 0.4px black; 
+  text-shadow: 2px 2px 4px #333;
+  z-index: 10;
+  margin: 0;
+  text-align: center;
+}
+
+.credits-list {
+  font-size: 1.7rem;
+  line-height: 1.4rem;
+  color: white;
+  text-align: center;
+  -webkit-text-stroke: 0.5px black; 
+  text-shadow: 2px 2px 4px #333;
+}
+
+
+.section-title {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.9rem;
+  margin-top: 10px;
+  -webkit-text-stroke: 0.8px black;
+  text-shadow: 2px 2px 4px #333;
+}
+
+.project-link {
+  color: white;
+  text-decoration: underline;
+}

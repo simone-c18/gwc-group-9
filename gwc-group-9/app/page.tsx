@@ -11,6 +11,13 @@ export default function App() {
 
   return (
     <div className="App">
+
+    <div className="floating-balls">
+      {[...Array(15)].map((_, i) => (
+        <div key={i} className="ball"></div>
+      ))}
+    </div>
+
       <header>Intro to Love!</header>
       <main>
         <ul className="start-buttons">
