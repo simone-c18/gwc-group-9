@@ -43,6 +43,9 @@ export const CHARACTERS = [
         avatarPath: '/images/C_default.png',
         spritePath: '/images/C_default.png',
 
+
+        //backgorund image
+          backgroundPath: '/images/c_bg.png',
         //link to story and quiz ("date")
         storyId: 'story-c',
         quizId: 'quiz-c',
@@ -73,6 +76,9 @@ export const CHARACTERS = [
         //paths to visual assets
         avatarPath: '/images/Py_default.png',
         spritePath: '/images/Py_default.png',
+
+        //backgorund image
+          backgroundPath: '/images/python_bg.png',
 
         //link to story and quiz ("date")
         storyId: 'story-python',
