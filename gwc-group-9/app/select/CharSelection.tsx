@@ -25,6 +25,10 @@ export default function CharacterSelection() {
     <div className="character-selection">
       <h1 className="selection-header">Choose Your Language~</h1>
 
+      <button className="back-button" onClick={() => router.push("/")}>
+        <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+      </button>
+
       <div className="character-grid">
         {characters.map((char) => (
           <div

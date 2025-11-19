@@ -21,7 +21,9 @@ export default function ResultsPage() {
 
   return (
     <div className="results-page">
-      <button className="back-button" onClick={() => router.push('/select')}>← Back</button>
+      <button className="back-button" onClick={() => router.push("/")}>
+        <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+      </button>
 
       <div className="results-container">
         <h1 className="results-title">Conversation Complete!</h1>

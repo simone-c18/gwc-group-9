@@ -17,28 +17,16 @@
 
 .back-button {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  padding: 0;
-  font-size: 1.8rem;
-  background-color: rgba(255, 192, 203, 0.95);
-  border: 3px solid pink;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: black;
-  font-weight: 700;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
 }
 
-.back-button:hover {
-  background-color: rgba(255, 192, 203, 1);
-  transform: scale(1.1);
+.back-arrow {
+  width: 60px;
+  height: auto;
 }
 
 .results-container {

@@ -29,8 +29,10 @@ export default function DatePage() {
   if (currentDialogueIndex >= character.dialogue.length) {
     return (
       <div className="date-page">
-        <button className="back-button" onClick={() => router.push('/select')}>
-        </button>        
+        <button className="back-button" onClick={() => router.push("/")}>
+          <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+        </button>
+       
         <div className="date-container">
           <div className="character-display">
             <img src={character.avatarPath} alt={character.name} className="character-sprite" />
@@ -58,7 +60,10 @@ export default function DatePage() {
 
   return (
     <div className="date-page">
-      <button className="back-button" onClick={() => router.push('/select')}>←</button>
+      <button className="back-button" onClick={() => router.push("/select")}>
+        <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+      </button>
+
 
       <div className="date-container">
         <div className="character-display">

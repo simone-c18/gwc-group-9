@@ -70,3 +70,17 @@
 .character-card:hover .character-name {
   opacity: 1;
 }
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-arrow {
+  width: 60px;
+  height: auto;
+}
