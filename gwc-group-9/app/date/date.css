@@ -76,7 +76,7 @@
   align-items: center;
 }
 
-.character-name {
+/* .character-name {
   background: white;
   border: 3px solid pink;
   border-radius: 16px;
@@ -89,7 +89,7 @@
   top: -20px;
   left: 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .dialogue-text {
   color: black;

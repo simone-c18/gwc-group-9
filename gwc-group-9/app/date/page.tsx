@@ -38,7 +38,7 @@ export default function DatePage() {
             <img src={character.avatarPath} alt={character.name} className="character-sprite" />
           </div>
           <div className="dialogue-box">
-            <div className="character-name">{character.name}</div>
+            {/* <div className="character-name">{character.name}</div> */}
             <div className="dialogue-text">Thank you for talking with me! That was nice!</div>
             <div className="dialogue-buttons">
               <button className="choice-button" onClick={() => router.push('/results')}>
@@ -71,7 +71,7 @@ export default function DatePage() {
         </div>
 
         <div className="dialogue-box">
-          <div className="character-name">{character.name}</div>
+          {/* <div className="character-name">{character.name}</div> */}
           <div className="dialogue-text">{currentDialogue.text}</div>
           <div className="dialogue-buttons">
             {currentDialogue.choices.map((choice, index) => (
