@@ -11,6 +11,10 @@ export const CHARACTERS = [
         avatarPath: '/images/Default Java.png',
         spritePath: '/images/Java Smoling.png',
 
+        correctSpritePath: '/images/Java_Bloosh.png',
+        wrongSpritePath: '/images/Java_didnt_like_that_fucking_answer.png',
+
+
         backgroundPath: '/images/java_bg.png',
         storyId: 'story-java',
         quizId: 'quiz-java',
@@ -80,6 +84,10 @@ export const CHARACTERS = [
         avatarPath: '/images/C Neutral Face.png',
         spritePath: '/images/C Neutral Face.png',
 
+        correctSpritePath: '/images/C smiling.png',
+        wrongSpritePath: '/images/C didnt like that.png',
+
+
         backgroundPath: '/images/c_bg.png',
         storyId: 'story-c',
         quizId: 'quiz-c',
@@ -148,6 +156,10 @@ export const CHARACTERS = [
 
         avatarPath: '/images/Python Neutral.png',
         spritePath: '/images/Python Smile.png',
+
+        correctSpritePath: '/images/Python Bludh.png',
+        wrongSpritePath: '/images/Python Unhappy.png',
+
 
         backgroundPath: '/images/python_bg.png',
         storyId: 'story-python',

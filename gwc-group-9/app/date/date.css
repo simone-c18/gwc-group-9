@@ -169,3 +169,46 @@
 }
 }
 
+.hearts-animation {
+  position: relative;
+}
+
+/* heart shows when we get question right*/
+.hearts-animation::after {
+  content: "💖 💗 💖 💕 💖";
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+  animation: floatHearts 1.2s ease-out forwards;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+@keyframes floatHearts {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -20px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40px) scale(0.9);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.4s ease-in-out;
+}
+
+/*shakes da uh character IF we get the question wrong*/
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-8px); }
+  100% { transform: translateX(0px); }
+}

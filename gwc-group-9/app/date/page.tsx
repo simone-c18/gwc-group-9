@@ -9,12 +9,13 @@ import { useState } from 'react';
 export default function DatePage() {
   const router = useRouter();
   const { selectedCharacter } = useGame() as { selectedCharacter: string | null };
-  const [currentDialogueIndex, setCurrentDialogueIndex] = useState(0);
-  
-  // Get the full character object from the ID
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showReaction, setShowReaction] = useState(false);
+  const [reactionCorrect, setReactionCorrect] = useState<boolean | null>(null);
+
   const character = selectedCharacter ? getCharacterById(selectedCharacter) : null;
-  
-  // Handle case where no character is selected
+
   if (!character) {
     return (
       <div className="date-page">
@@ -24,25 +25,24 @@ export default function DatePage() {
     );
   }
 
-  // Check if we've finished all dialogue
-  if (currentDialogueIndex >= character.dialogue.length) {
+  const quiz = character.dateQuiz;
+
+  if (currentIndex >= quiz.length) {
     return (
       <div className="date-page">
         <button className="back-button" onClick={() => router.push("/")}>
           <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
         </button>
-       
+
         <div className="date-container">
           <div className="character-display">
-            <img src={character.avatarPath} alt={character.name} className="character-sprite" />
+            <img src={character.spritePath} alt={character.name} className="character-sprite" />
           </div>
+
           <div className="dialogue-box">
-            {/* <div className="character-name">{character.name}</div> */}
-            <div className="dialogue-text">Thank you for talking with me! That was nice!</div>
+            <div className="dialogue-text">Thanks for hanging out with me! Let's see how you did!</div>
             <div className="dialogue-buttons">
-              <button className="choice-button" onClick={() => router.push('/results')}>
-                Continue
-              </button>
+              <button className="choice-button" onClick={() => router.push('/results')}>Continue</button>
             </div>
           </div>
         </div>
@@ -50,34 +50,81 @@ export default function DatePage() {
     );
   }
 
-  const currentDialogue = character.dialogue[currentDialogueIndex];
+  const currentQuestion = quiz[currentIndex];
 
-  const handleChoiceSelect = (choiceIndex: number) => {
-    // Move to next dialogue or finish
-    setCurrentDialogueIndex(currentDialogueIndex + 1);
+  const handleChoiceSelect = (index: number) => {
+    const isCorrect = index === currentQuestion.correctIndex;
+
+    setReactionCorrect(isCorrect);
+    setShowReaction(true);
+
+    setTimeout(() => {
+      setShowReaction(false);
+      setReactionCorrect(null);
+      setCurrentIndex((prev) => prev + 1);
+    }, 1300);
   };
 
+  // ---------------------------
+  //   REACTION MODE
+  // ---------------------------
+  if (showReaction && reactionCorrect !== null) {
+    return (
+      <div className="date-page">
+        <button className="back-button" onClick={() => router.push("/select")}>
+          <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+        </button>
+
+        <div className="date-container">
+
+          <div className={`character-display ${reactionCorrect ? 'hearts-animation' : 'shake-animation'}`}>
+            <img
+              src={
+                reactionCorrect
+                  ? character.correctSpritePath
+                  : character.wrongSpritePath
+              }
+              alt="reaction"
+              className="character-sprite"
+            />
+          </div>
+
+          <div className="dialogue-box">
+            <div className="dialogue-text">
+              {reactionCorrect
+                ? "Great job! I'm glad to see you understood what I taught you <3"
+                : "Ehhhh~ that wasn’t quite it… It's okay though!!"}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+
+  // ---------------------------
+  //   NORMAL QUESTION MODE
+  // ---------------------------
   return (
     <div className="date-page">
       <button className="back-button" onClick={() => router.push("/select")}>
         <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
       </button>
 
-
       <div className="date-container">
         <div className="character-display">
-          <img src={character.avatarPath} alt={character.name} className="character-sprite" />
+          <img src={character.spritePath} alt="sprite" className="character-sprite" />
         </div>
 
         <div className="dialogue-box">
-          {/* <div className="character-name">{character.name}</div> */}
-          <div className="dialogue-text">{currentDialogue.text}</div>
+          <div className="dialogue-text">{currentQuestion.question}</div>
+
           <div className="dialogue-buttons">
-            {currentDialogue.choices.map((choice, index) => (
-              <button 
-                key={index}
-                className="choice-button" 
-                onClick={() => handleChoiceSelect(index)}
+            {currentQuestion.choices.map((choice, i) => (
+              <button
+                key={i}
+                className="choice-button"
+                onClick={() => handleChoiceSelect(i)}
               >
                 {choice}
               </button>
@@ -87,7 +134,7 @@ export default function DatePage() {
       </div>
 
       <div className="dialogue-progress">
-        {currentDialogueIndex + 1} / {character.dialogue.length}
+        {currentIndex + 1} / {quiz.length}
       </div>
     </div>
   );
