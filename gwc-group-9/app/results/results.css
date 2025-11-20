@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+
+/* --- NON-SCROLLABLE FIXES --- */
+html, 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Prevents all scrolling */
+    overflow: hidden; 
+}
+/* ---------------------------- */
+
+/* --- Base Container --- */
+.results-page-container {
+    /* Mimics: flex flex-col items-center justify-center h-screen w-full bg-gray-100 p-8 background-size: 'cover' */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensures full viewport height */
+    width: 100%;
+    padding: 2rem; /* p-8 */
+    background-color: #f3f4f6; /* bg-gray-100 */
+    background-size: cover;
+}
+
+/* --- Results Box (Pink Container) --- */
+.results-box {
+    /* Mimics: w-full max-w-xl p-8 md:p-12 rounded-[20px] shadow-2xl transition-all duration-500 transform scale-100 */
+    width: 100%;
+    max-width: 36rem; /* max-w-xl */
+    padding: rem; /* p-8 */
+    border-radius: 20px; /* rounded-[20px] */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    transition: all 500ms ease;
+}
+@media (min-width: 768px) {
+    .results-box {
+        padding: 3rem; /* md:p-12 */
+    }
+}
+
+/* --- Title --- */
+.results-title {
+    /* Mimics: text-5xl md:text-6xl font-extrabold mb-6 text-center */
+    font-size: 3rem; /* text-5xl */
+    font-weight: 800; /* font-extrabold */
+    margin-bottom: 1.5rem; /* mb-6 */
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .results-title {
+        font-size: 3.75rem; /* md:text-6xl */
+    }
+}
+
+/* --- Score Card (White/Translucent Box) --- */
+.score-card {
+    /* Mimics: bg-white/70 p-6 rounded-xl shadow-lg border border-pink-300 */
+    background-color: rgba(255, 255, 255, 0.7); /* bg-white/70 */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    border: 1px solid #fbcfe8; /* border-pink-300 */
+    font-family: 'Courier New', monospace;
+}
+
+.score-card-message {
+    /* Mimics: text-xl md:text-2xl font-semibold mb-4 text-gray-800 text-center */
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 1rem; /* mb-4 */
+    color: #1f2937; /* text-gray-800 */
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .score-card-message {
+        font-size: 1.5rem; /* md:text-2xl */
+    }
+}
+
+.character-name {
+    /* Mimics: font-extrabold text-pink-700 */
+    font-weight: 800; /* font-extrabold */
+    color: #be185d; /* text-pink-700 */
+}
+
+/* --- Score Display --- */
+.score-display {
+    /* Mimics: text-center my-6 */
+    text-align: center;
+    margin-top: 1.5rem; /* my-6 */
+    margin-bottom: 1.5rem;
+}
+
+.score-label {
+    /* Mimics: text-3xl font-bold uppercase mb-2 */
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-transform: uppercase;
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.score-value {
+    /* Mimics: text-7xl font-extrabold */
+    font-size: 4.5rem; /* text-7xl */
+    font-weight: 800; /* font-extrabold */
+    display: block; /* To ensure full width for text-align */
+}
+
+.result-message {
+    /* Mimics: text-lg mt-2 font-medium italic text-gray-600 */
+    font-size: 1.125rem; /* text-lg */
+    margin-top: 0.5rem; /* mt-2 */
+    font-weight: 500; /* font-medium */
+    font-style: italic;
+    color: #4b5563; /* text-gray-600 */
+}
+
+/* --- Dynamic Score Colors --- */
+.score-green {
+    color: #047857; /* text-green-700 */
+}
+.score-red {
+    /* Corrected from 'white' to a visible red color */
+    color: #b91c1c; /* text-red-700 */
+}
+.score-yellow {
+    color: #b45309; /* text-yellow-700 */
+}
+.score-pink-dark {
+    color: #9d174d; /* text-pink-800 */
+}
+
+/* --- Character Avatar --- */
+.character-avatar-container {
+    /* Mimics: flex justify-center mt-6 */
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem; /* mt-6 */
+}
+
+.character-avatar {
+    /* Mimics: w-28 h-28 object-cover rounded-full border-4 border-pink-500 shadow-xl */
+    width: 7rem; /* w-28 */
+    height: 7rem; /* h-28 */
+    object-fit: cover;
+    border-radius: 9999px; /* rounded-full */
+    border: 4px solid #be185d; /* border-pink-500 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
+}
+
+/* --- Action Buttons --- */
+.action-buttons-container {
+    /* Mimics: flex flex-col md:flex-row justify-center gap-4 mt-8 */
+    display: flex;
+    flex-direction: column; /* flex-col */
+    justify-content: center;
+    gap: 1rem; /* gap-4 */
+    margin-top: 2rem; /* mt-8 */
+}
+@media (min-width: 768px) {
+    .action-buttons-container {
+        flex-direction: row; /* md:flex-row */
+    }
+}
+
+/* --- Button Base Styles --- */
+.select-new-character-button,
+.go-home-button {
+    /* Shared button styles: font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 uppercase text-lg */
+    font-weight: 700; /* font-bold */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+    transition: all 200ms ease; /* duration-200 */
+    text-transform: uppercase;
+    /* Completed the truncated font-size value */
+    font-size: 1.125rem; /* text-lg */
+    cursor: pointer;
+    border: none;
+    transform: scale(1); /* Initial transform for hover */
+}
+
+/* --- Pink Button Specifics --- */
+.select-new-character-button {
+    /* Mimics: bg-pink-500 hover:bg-pink-600 text-white */
+    background-color: #ec4899; /* bg-pink-500 */
+    color: white; /* text-white */
+}
+.select-new-character-button:hover {
+    background-color: #db2777; /* hover:bg-pink-600 */
+    transform: scale(1.02); /* hover:scale-[1.02] */
+}
+
+/* --- Gray Button Specifics --- */
+.go-home-button {
+    /* Mimics: bg-gray-300 hover:bg-gray-400 text-gray-800 */
+    background-color: #d1d5db; /* bg-gray-300 */
+    color: #1f2937; /* text-gray-800 */
+}
+.go-home-button:hover {
+    background-color: #9ca3af; /* hover:bg-gray-400 */
+    transform: scale(1.02); /* hover:scale-[1.02] */
+}
