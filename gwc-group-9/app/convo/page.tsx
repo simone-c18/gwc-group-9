@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { useGame } from '../../context/GameContext';
 import { getCharacterById } from '../../data/characters';
 import { useState } from 'react';
-// import backArrow from '.../public/images/back_arrow.png' // Adjust the path as needed
 
 export default function DatePage() {
   const router = useRouter();
@@ -14,7 +13,19 @@ export default function DatePage() {
   
   // Get the full character object from the ID
   const character = selectedCharacter ? getCharacterById(selectedCharacter) : null;
-  
+
+  // ⭐ ADDED: dynamic background style based on selected character
+  const backgroundStyle = character
+    ? {
+        backgroundImage: `url(${character.backgroundPath})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+        width: "100%",
+      }
+    : {};
+
   // Handle case where no character is selected
   if (!character) {
     return (
@@ -28,18 +39,21 @@ export default function DatePage() {
   // Check if we've finished all dialogue
   if (currentDialogueIndex >= character.dialogue.length) {
     return (
-      <div className="date-page">
-        <button className="back-button" onClick={() => router.push('/select')}>
-        </button>        
+      // ⭐ CHANGED: added style={backgroundStyle}
+      <div className="date-page" style={backgroundStyle}>
+        <button className="back-button" onClick={() => router.push("/")}>
+          <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+        </button>
+       
         <div className="date-container">
           <div className="character-display">
-            <img src={character.avatarPath} alt={character.name} className="character-sprite" />
+            {/* <img src={character.avatarPath} alt={character.name} className="character-sprite" /> */}
           </div>
           <div className="dialogue-box">
-            <div className="character-name">{character.name}</div>
+            {/* <div className="character-name">{character.name}</div> */}
             <div className="dialogue-text">Thank you for talking with me! That was nice!</div>
             <div className="dialogue-buttons">
-              <button className="choice-button" onClick={() => router.push('/results')}>
+              <button className="choice-button" onClick={() => router.push('/lesson')}>
                 Continue
               </button>
             </div>
@@ -52,21 +66,23 @@ export default function DatePage() {
   const currentDialogue = character.dialogue[currentDialogueIndex];
 
   const handleChoiceSelect = (choiceIndex: number) => {
-    // Move to next dialogue or finish
     setCurrentDialogueIndex(currentDialogueIndex + 1);
   };
 
   return (
-    <div className="date-page">
-      <button className="back-button" onClick={() => router.push('/select')}>←</button>
+    // ⭐ CHANGED: added style={backgroundStyle}
+    <div className="date-page" style={backgroundStyle}>
+      <button className="back-button" onClick={() => router.push("/select")}>
+        <img src="/images/back_arrow.png" alt="Back" className="back-arrow" />
+      </button>
 
       <div className="date-container">
         <div className="character-display">
-          <img src={character.avatarPath} alt={character.name} className="character-sprite" />
+          {/* <img src={character.avatarPath} alt={character.name} className="character-sprite" /> */}
         </div>
 
         <div className="dialogue-box">
-          <div className="character-name">{character.name}</div>
+          {/* <div className="character-name">{character.name}</div> */}
           <div className="dialogue-text">{currentDialogue.text}</div>
           <div className="dialogue-buttons">
             {currentDialogue.choices.map((choice, index) => (

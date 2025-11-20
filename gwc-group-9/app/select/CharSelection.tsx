@@ -18,7 +18,7 @@ export default function CharacterSelection() {
   const handleClick = (id: string) => {
     // set global selected character and navigate to date screen
     setSelectedCharacter(id);
-    router.push("/date");
+    router.push("/convo");
   };
 
   return (

@@ -13,8 +13,22 @@ export const CHARACTERS = [
         spritePath: '/images/Java_hover.png',
 
         //link to story and quiz ("date")
+        backgroundPath: '/images/java_bg.png',
         storyId: 'story-java',
         quizId: 'quiz-java',
+
+        // New Lesson Page Content
+        lessonTitle: 'Java Fundamentals',
+        lessonContent: [
+            {
+                heading: 'Classes',
+                text: 'Java is an **Object-Oriented Programming (OOP)** language. Everything revolves around classes and objects. Classes are blueprints for creating objects.\n\nTo define a class, the keyword `class` is used.',
+            },
+            {
+                heading: 'Variables in Java',
+                text: 'Like many languages, Java uses basic data types: `int`, `char`, `double`, and `boolean`. All variables must be declared before they are used.\n\nint age = 25;\n\nThis creates an integer variable named `age` and sets its value.',
+            }
+        ],
 
         //dialogue sequence
         dialogue: [
@@ -43,9 +57,26 @@ export const CHARACTERS = [
         avatarPath: '/images/C_default.png',
         spritePath: '/images/C_default.png',
 
+
+        //backgorund image
+        backgroundPath: '/images/c_bg.png',
         //link to story and quiz ("date")
         storyId: 'story-c',
         quizId: 'quiz-c',
+        
+        // New Lesson Page Content
+        lessonTitle: 'C: The Foundation',
+        lessonContent: [
+            {
+                heading: 'Pointers',
+                text: 'C is famous for Pointers, which are variables that store the memory address of another variable. They allow for powerful, low-level memory manipulation.',
+            },
+            {
+                heading: 'Integers',
+                text: 'An integer represents a whole-number value. For example, "7" or "12."\nTo declare an integer variable in C, the following syntax is used:\n\nint val = 3;\n\nThe keyword \'int\' is used followed by the variable name.',
+            }
+        ],
+
 
         //dialogue sequence
         dialogue: [
@@ -74,9 +105,26 @@ export const CHARACTERS = [
         avatarPath: '/images/Py_default.png',
         spritePath: '/images/Py_default.png',
 
+        //backgorund image
+          backgroundPath: '/images/python_bg.png',
+
         //link to story and quiz ("date")
         storyId: 'story-python',
         quizId: 'quiz-python',
+        
+        // New Lesson Page Content
+        lessonTitle: 'Python: Readability and Power',
+        lessonContent: [
+            {
+                heading: 'Indentation',
+                text: 'Unlike C or Java, Python uses **indentation** (whitespace) to define code blocks (like loops and functions), rather than curly braces `{}`. This is what makes its syntax so clean!',
+            },
+            {
+                heading: 'Dynamic Typing',
+                text: 'Python uses **dynamic typing**. You don\'t need to declare the variable type when you create it. The type is determined automatically at runtime.\n\nmy_variable = "hello"\n\nThis automatically creates a string variable.',
+            }
+        ],
+
 
         //dialogue sequence
         dialogue: [
