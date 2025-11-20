@@ -1,9 +1,9 @@
  .date-page {
   background-image: url('/images/hallway_bg.png');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   width: 100vw;
   min-height: 100vh;
   padding: 2rem;
