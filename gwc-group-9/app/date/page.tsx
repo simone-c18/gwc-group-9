@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { useGame } from '../../context/GameContext';
 import { getCharacterById } from '../../data/characters';
 import { useState } from 'react';
-// import backArrow from '.../public/images/back_arrow.png' // Adjust the path as needed
 
 export default function DatePage() {
   const router = useRouter();
