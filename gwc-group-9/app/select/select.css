@@ -10,61 +10,39 @@
   color: white;
   -webkit-text-stroke: 0.4px black; 
   
-  /* FIXES FOR FULL-SCREEN AND NO SCROLLING */
-  height: 100vh; /* Exactly 100% of viewport height */
-  overflow: hidden; /* Prevents scrolling */
-  background-size: cover;
-  
-  /* Use Flexbox to manage vertical layout */
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Start content from the top */
-  padding-bottom: 20px; 
-} 
-
-/* --- HEADER FIXES --- */
 .selection-header {
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
+  margin-bottom: 1em;
   color: #ffffff;
-  text-shadow: 1px 1px 2px black;
   
-  margin-top: 1em; 
-  margin-bottom: 1em; 
-}
+  text-shadow: 1px 1px 2px black;
+} /* Header size and color and added a shadow to it cuz idk how to outline it for some reason*/
 
-/* --- GRID FIXES (ANCHORING) --- */
+
 .character-grid {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  
-  /* IMPORTANT FIX: Pushes the grid container down, consuming space above it */
-  margin-top: auto; 
-  margin-bottom: 0;
 }
 
-/* --- CARD FIXES --- */
 .character-card {
   position: relative;
-  /* ADJUSTED height to better fit within the fixed viewport */
-  height: 70vh; 
-  width: 300px;
+  width: 400px;
+  height: 600px;
   cursor: pointer;
   overflow: hidden;
+  border: 3px solid transparent;
   transition: transform 0.2s, border-color 0.3s;
   border-radius: 8px;
-  
-  /* Smooth scaling fix */
-  transform: translateZ(0); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .character-card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   border-color: #ff7373;
-} 
+} /**/
 
 .character-image {
   width: 100%;
@@ -74,37 +52,23 @@
   transition: opacity 0.3s ease;
 }
 
-/* --- NAME FIXES --- */
 .character-name {
   position: absolute;
-  bottom: 0px; 
+  bottom: 50px;
   width: 100%;
-  padding: 15px 0;
-  font-size: 3rem;
+  color: white;
+  padding: 10px 0;
+  font-size: 2.5rem;
   font-weight: bold;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
   text-shadow: 1px 1px 2px black;
+
   opacity: 0;
   transition: opacity 0.3s ease;
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .character-card:hover .character-name {
   opacity: 1;
-}
-
-/* --- BUTTONS --- */
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.back-arrow {
-  width: 60px;
-  height: auto;
-}
+}}
