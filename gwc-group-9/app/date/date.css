@@ -54,11 +54,11 @@
 }
 
 .character-sprite {
-  width: 120%;
+  width: auto;
   height: auto;
-  max-height: 90vh;
+  max-height: 100vh;
   object-fit: contain;
-  transform: scale(1.2);
+  transform: scale(1.5);
   margin-bottom: 0;
 }
 

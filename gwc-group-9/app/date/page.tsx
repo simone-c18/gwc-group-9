@@ -65,9 +65,7 @@ export default function DatePage() {
     }, 1300);
   };
 
-  // ---------------------------
-  //   REACTION MODE
-  // ---------------------------
+// shows da reaction of character depending on answer
   if (showReaction && reactionCorrect !== null) {
     return (
       <div className="date-page">
@@ -102,9 +100,7 @@ export default function DatePage() {
     );
   }
 
-  // ---------------------------
-  //   NORMAL QUESTION MODE
-  // ---------------------------
+// questions
   return (
     <div className="date-page">
       <button className="back-button" onClick={() => router.push("/select")}>
@@ -131,10 +127,6 @@ export default function DatePage() {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="dialogue-progress">
-        {currentIndex + 1} / {quiz.length}
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default function App() {
 
         <div className="credits-image-box">
           <img
-            src="/images/dreamTeam1.png"     
+            src="/images/team.jpg"     
             alt="Group Photo"
             className="credits-image"
           />
